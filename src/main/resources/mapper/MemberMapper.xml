@@ -3,15 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.crops.mapper.MemberMapper">
-    <insert id="insert">
+    <insert id="insertMember">
         insert into
-            member (id, password, password_con, name)
+            user (userId, password, password_con, name)
         values
-            (#{id}, #{password}, #{password_con}, #{name});
+            (#{userId}, #{password}, #{password_con}, #{name});
     </insert>
-    <select id="getMem">
+    <select id="getMemberById">
         select *
-        from member
-        where id = #{id} and password = #{password};
+        from user
+        where userId = #{userId};
+    </select>
+
+    <select id="loginMember">
+        select *
+        from user
+        where userId = #{userId} and password = #{password};
     </select>
 </mapper>

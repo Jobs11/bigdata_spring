@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    Main Home
+<%@ include file="include/sidebar.jsp" %>
+Main
+
 </body>
 </html>
