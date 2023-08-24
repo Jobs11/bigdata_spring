@@ -19,13 +19,16 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/member/*")
 @AllArgsConstructor
 public class MemberController {
+
     @Autowired
     private MemberService memberService;
 
-    @GetMapping("/insert")
-    public void getreg(){
 
+    @GetMapping("/insert")
+    public String check(){
+        return "member/insert";
     }
+
 
     @PostMapping("/insert")
     public String register(MemberVO member, Model model){
@@ -39,22 +42,24 @@ public class MemberController {
         return "redirect:/";  // 회원 가입 성공 시 홈페이지로 리다이렉트
     }
 
-    @PostMapping("/login")
+    @RequestMapping("/login")
     public String login(MemberVO member, Model model, HttpSession session) {
         // 이미 존재하는 userId인지 확인
         MemberVO loggedInMember = memberService.loginMember(member.getUserId(), member.getPassword());
         if (loggedInMember != null) {
             // 로그인 성공 시 세션에 사용자 정보 저장
             session.setAttribute("loggedInMember", loggedInMember);
+            log.info(session);
         }
 
         return "redirect:/";  // 로그인 성공 시 홈페이지로 리다이렉트
     }
 
-    @GetMapping("/logout")
+    @RequestMapping("/logout")
     public String logout(HttpSession session) {
         // 세션 제거
         session.invalidate();
+        log.info("로그아웃");
         return "redirect:/";  // 로그아웃 후 홈페이지로 리다이렉트
     }
 

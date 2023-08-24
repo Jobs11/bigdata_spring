@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,11 +52,22 @@
                     </a>
                     <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" da  ta-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" id="loginButton">로그인</a>
-                            <a class="nav-link" href="../member/insert">회원가입</a>
-                            <a class="nav-link" href="../member/logout">로그아웃</a>
+                            <c:choose>
+                                <c:when test="${empty sessionScope.loggedInMember}">
+                                    <a class="nav-link" id="loginButton">로그인</a>
+                                    <a class="nav-link" href="../member/insert">회원가입</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a class="nav-link" href="../member/logout">로그아웃</a>
+                                </c:otherwise>
+                            </c:choose>
                         </nav>
+
+
                     </div>
+
+
+
 
 
                     <div class="sb-sidenav-menu-heading">------------------</div>
