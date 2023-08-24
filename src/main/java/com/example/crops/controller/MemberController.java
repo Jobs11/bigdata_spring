@@ -4,6 +4,7 @@ import com.example.crops.domain.MemberVO;
 import com.example.crops.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/member/*")
 @AllArgsConstructor
 public class MemberController {
+    @Autowired
     private MemberService memberService;
 
     @GetMapping("/insert")
