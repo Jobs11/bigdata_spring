@@ -80,6 +80,7 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="#">게시판 목록</a>
                             <a class="nav-link" href="#">게시물 쓰기</a>
+                            <a class="nav-link" href="../news/newsdata">뉴스 검색</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

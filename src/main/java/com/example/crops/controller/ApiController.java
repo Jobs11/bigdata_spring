@@ -24,26 +24,32 @@ import java.util.List;
 @RequestMapping("/news/*")
 public class ApiController {
 
-    @GetMapping("/apitest")
-    public void getdata(Model model, String search, Integer a) throws IOException {
+    @GetMapping("/newsdata")
+    public void getdata(Model model, String search, Integer p) throws IOException {
 
         String text = null;
 //
         List<NewsVO> newsList = new ArrayList<>();
-
+        if (search == null){
+            search = "농사";
+        }
+        if ( p == null) {
+            p = 1;
+        }
+        System.out.println("search: " + search + " a: " + p);
         try {
             text = URLEncoder.encode(search, "UTF-8");
-            String apiURL = "https://search.daum.net/nate?w=news&nil_search=btn&DA=NTB&enc=utf8&cluster=y&cluster_page=1&q=" + text + "&p=" + a;
+            String apiURL = "https://search.daum.net/nate?w=news&nil_search=btn&DA=NTB&enc=utf8&cluster=y&cluster_page=1&q=" + text + "&p=" + p;
 
             Document doc = Jsoup.connect(apiURL).get();
             Elements liElements = doc.select("ul.list_news"); // Select all <li> elements
-            System.out.println(liElements);
+//            System.out.println(liElements);
             for (Element liElement : liElements) {
                 Elements li_lists =liElement.select("li");
                 for (Element li_list : li_lists){
                     NewsVO newsVO = new NewsVO();
                     String imgurl = li_list.select("img").attr("data-original-src");
-                    System.out.println("imgurl: "+imgurl);
+//                    System.out.println("imgurl: "+imgurl);
                     newsVO.setImgurl(imgurl);
 
 
@@ -57,23 +63,19 @@ public class ApiController {
                         String pubDate = des_tag.select("span.cont_info").select("span.f_nb").text();
                         newsVO.setTitle(title);
                         newsVO.setLink(link);
+                        if ( description.length() >= 30) {
+                            description = description.substring(0, 30) + "...";
+                        }
                         newsVO.setDescription(description);
-
                         newsVO.setNewspaper(newspaper);
                         newsVO.setPubDate(pubDate);
-                        System.out.println("title: " +title);
-                        System.out.println("link: " + link);
-                        System.out.println("description: "+description);
-
-                        System.out.println("newspaper: "+ newspaper);
-                        System.out.println("pubDate: "+pubDate);
+//                        System.out.println("title: " +title);
+//                        System.out.println("link: " + link);
+//                        System.out.println("description: "+description);
+//
+//                        System.out.println("newspaper: "+ newspaper);
+//                        System.out.println("pubDate: "+pubDate);
                     }
-
-
-//
-//
-//
-//
 
                     newsList.add(newsVO);
                 }
@@ -82,8 +84,9 @@ public class ApiController {
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException("검색어 인코딩 실패", e);
         }
-
         model.addAttribute("news", newsList);
+        model.addAttribute("paging", p);
+        model.addAttribute("search", search);
 
     }
 
