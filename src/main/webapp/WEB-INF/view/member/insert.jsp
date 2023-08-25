@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,18 +48,18 @@
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
                                     <%-- message가 존재하는 경우에만 alert 메시지를 출력 --%>
-                                    <c:choose>
-                                        <c:when test="${not empty message}">
-                                            <script>
-                                                alert("${message}");
-                                            </script>
-                                        </c:when>
-                                        <%-- 메시지가 없는 경우 아무 것도 렌더링하지 않음 --%>
-                                        <c:otherwise></c:otherwise>
-                                    </c:choose>
+<%--                                    <c:choose>--%>
+<%--                                        <c:when test="${not empty message}">--%>
+<%--                                            <script>--%>
+<%--                                                alert("${message}");--%>
+<%--                                            </script>--%>
+<%--                                        </c:when>--%>
+<%--                                        &lt;%&ndash; 메시지가 없는 경우 아무 것도 렌더링하지 않음 &ndash;%&gt;--%>
+<%--                                        <c:otherwise></c:otherwise>--%>
+<%--                                    </c:choose>--%>
 
 
-                                    <form class="mx-1 mx-md-4" action = "../member/insert" name="insert" method="post" onsubmit="return validateForm()">
+                                    <form class="mx-1 mx-md-4" action = "/member/insert" name="insert" method="post"> <%--onsubmit="return validateForm()"> --%>
 
 
                                         <div class="d-flex flex-row align-items-center mb-4">
@@ -102,7 +104,7 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="${pageContext.request.contextPath}/resources/image/insert.png" class="img-fluid" alt="Sample image">
+                                    <img src="/image/insert.png" class="img-fluid" alt="Sample image">
 
                                 </div>
                             </div>

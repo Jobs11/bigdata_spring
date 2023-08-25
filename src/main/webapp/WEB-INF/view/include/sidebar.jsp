@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,7 +135,7 @@
 
                                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
 
-                                        <form class="mx-1 mx-md-4" action="../member/login" name="login" method="post" onsubmit="return validateForm()">
+                                        <form class="mx-1 mx-md-4" action="/member/login" name="login" method="post" onsubmit="return validateForm()">
 
 
                                             <div class="d-flex flex-row align-items-center mb-4">
@@ -164,7 +165,7 @@
                                     </div>
                                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                        <img src="${pageContext.request.contextPath}/resources/image/insert.png" class="img-fluid" alt="Sample image">
+                                        <img src="/image/insert.png" class="img-fluid" alt="Sample image">
 
                                     </div>
                                 </div>

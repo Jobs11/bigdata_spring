@@ -5,10 +5,12 @@
 <mapper namespace="com.example.crops.mapper.MemberMapper">
     <insert id="insertMember">
         insert into
-            user (userId, password, password_con, name)
+            user (userId, password, password_con, name, role)
         values
-            (#{userId}, #{password}, #{password_con}, #{name});
+            (#{userId}, #{password}, #{password_con}, #{name}, "USER");
     </insert>
+
+
     <select id="getMemberById">
         select *
         from user

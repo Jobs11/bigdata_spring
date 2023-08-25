@@ -37,6 +37,14 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'org.jsoup:jsoup:1.14.3'
 
+
+    //시큐리티추가
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //jsp에 시큐리티 태그랩 쓰려면
+    implementation 'org.springframework.security:spring-security-taglibs'
+
+
+
 }
 
 tasks.named('test') {
