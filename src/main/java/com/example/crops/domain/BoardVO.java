@@ -1,12 +1,15 @@
 package com.example.crops.domain;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
 @Data
 public class BoardVO {
-    private Long id;
+
+    private Integer id;
 
     private String title;
 
@@ -16,5 +19,7 @@ public class BoardVO {
 
     private Date createDate;
 
-    private Long cnt;
+    private int cnt;
+
+
 }

@@ -79,8 +79,8 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" da  ta-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="#">게시판 목록</a>
-                            <a class="nav-link" href="#">게시물 쓰기</a>
+                            <a class="nav-link" href="../board/BoardList">게시판 목록</a>
+                            <a class="nav-link" href="../board/BoardRegister">게시물 쓰기</a>
                             <a class="nav-link" href="../news/newsdata">뉴스 검색</a>
                         </nav>
                     </div>
