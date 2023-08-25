@@ -52,6 +52,10 @@ public class MemberController {
     }
 
 
+    @GetMapping("/login")
+    public void test2(){
+
+    }
 //    @RequestMapping("/login")
 //    public String login(MemberVO member, Model model, HttpSession session) {
 //        // 이미 존재하는 userId인지 확인

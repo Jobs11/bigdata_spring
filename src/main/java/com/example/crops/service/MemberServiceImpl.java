@@ -12,13 +12,13 @@ public class MemberServiceImpl implements MemberService {
 
 
     private final MemberMapper memberMapper; // 이곳에 final 키워드를 추가합니다
-    private final MemberService memberService;
+    private MemberService memberService;
     private MemberVO memberVO;
 
     // 생성자 주입
-    public MemberServiceImpl(MemberMapper memberMapper, MemberService memberService) {
+    public MemberServiceImpl(MemberMapper memberMapper) {
         this.memberMapper = memberMapper;
-        this.memberService = memberService;
+
     }
 
     @Override
