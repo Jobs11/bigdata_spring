@@ -12,18 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/data/*")
 public class DataController {
 
-    @GetMapping("/kinidata")
-    public String kinidata(){
-        return "data/kinidata";
+    @GetMapping("/graph_data")
+    public String graphdata(){
+        return "data/graph_data";
     }
 
-    @GetMapping("/whatdata")
-    public String whatdata(){
-        return "data/whatdata";
+    @GetMapping("/area_data")
+    public String areadata(){
+        return "data/area_data";
     }
 
-    @GetMapping("/test")
-    public String testdata(){
-        return "data/test";
+    @GetMapping("/moun_data")
+    public String moundata(){
+        return "data/moun_data";
     }
 }

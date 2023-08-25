@@ -96,9 +96,9 @@
                             </a>
                             <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../data/kinidata">Kini data</a>
-                                    <a class="nav-link" href="../data/whatdata">Wata data</a>
-                                    <a class="nav-link" href="../data/test">Forgot Password</a>
+                                    <a class="nav-link" href="../data/graph_data">작물별 비교 데이터</a>
+                                    <a class="nav-link" href="../data/area_data">지역별 작물 비율</a>
+                                    <a class="nav-link" href="../data/moun_data">주산지별 데이터</a>
                                 </nav>
                             </div>
                         </nav>
