@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>애호박 데이터</title>
+    <style>
+        .tableauPlaceholder {
+            margin-top: 60px;
+        }
+    </style>
 </head>
 <body>
 <%@ include file="../include/sidebar.jsp" %>
