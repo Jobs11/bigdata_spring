@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         log.info("loadUserByUsername: "+ userId);
 
-        UserDetails userDetails = User.builder().username("")
+        UserDetails userDetails = User.builder().username("user1")
                 .password(passwordEncoder.encode("1111"))
                 .authorities("ROLE_USER")
                 .build();

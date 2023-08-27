@@ -63,6 +63,12 @@
                                         <button type="submit" class="btn btn-primary btn-lg">login</button>
                                     </div>
 
+                                    <div class="input-group mb-3">
+                                        <input class="form-check-input" type="checkbox" name="remember-me">
+                                        <label class="form-check-label">자동로그인</label>
+                                    </div>
+
+
                                 </form>
 
                             </div>
