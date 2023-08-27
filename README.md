@@ -14,7 +14,10 @@
       ㄴ>UserDetailsService 인터페이스는 loadUser ByUsername()라는 메서드 단하나의 메소드를 가지는데, 이 부분이 실제 인증을 처리할 때 호출되는 부분
   ㄴ> 시프링 시큐리티는 기본적으로 PasswordEncoder가 필요함 => SecurityConfig에 @Bean으로 추가하자
   ㄴ> 어노테이션으로 권한 체크를 하려는 경우 들어가려고 하는 경로에(컨트롤러) + @PreAuthorize("hasRole('USER' || 'ADMIN')")등으로 체크할 수도 있다.
-
   (참조) @EnableWebSecurity는 전반적인 웹 보안 설정을 다루고, @EnableGlobalMethodSecurity는 메소드 수준의 보안 설정
+  (참조) CSRF토큰 = 사용자가 사이트를 이용할때 매번 변경되는 문자열을 생성하고, 무언가 요청시 검증하는 방식 <- 시큐리티는 기본적으로 GET방식을 제외한 모든 요청에 CSRF토큰을 요구함
+  
+  
   
 - 인가(Authoriztion) = 인증된 사용자라도 , 접근할 수 있는 권한이 있는지 확인하는 것
+- 
