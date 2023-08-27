@@ -18,7 +18,7 @@
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="../data/kinidata">펄스농</a>
+    <a class="navbar-brand ps-3" href="redirect:/">펄스농</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
@@ -54,7 +54,7 @@
                     <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" da  ta-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <c:choose>
-                                <c:when test="${empty sessionScope.loggedInMember}">
+                                <c:when test="${empty sessionScope}">
                                     <a class="nav-link" href="../member/login">로그인</a>
                                     <a class="nav-link" href="../member/insert">회원가입</a>
                                 </c:when>

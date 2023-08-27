@@ -22,8 +22,8 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public MemberVO getMemberById(String userId) {
-        return memberMapper.getMemberById(userId);
+    public MemberVO getMemberById(String username) {
+        return memberMapper.getMemberById(username);
     }
 
     @Override
@@ -32,20 +32,5 @@ public class MemberServiceImpl implements MemberService {
     }
 
 
-    @Override
-    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
-        MemberVO member = memberService.getMemberById(userId); // 실제로 사용자 정보를 가져와야 함
 
-        if (member == null) {
-            throw new UsernameNotFoundException(userId);
-        }
-
-        //UserDetail을 구현하고 있는 User객체를 반환해줌
-        //User객체를 생성하기 위해 생성자로 회원의 이메일, 비밀번호, role를 파라미터로 넘겨줌
-        return User.builder()
-                .username(member.getUserId())
-                .password(member.getPassword())
-                .authorities("ROLE_USER")
-                .build();
-    }
 }

@@ -1,6 +1,7 @@
 package com.example.crops.controller;
 
 import com.example.crops.domain.BoardVO;
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.example.crops.service.BoardService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -23,10 +24,14 @@ public class BoardController {
 
     private BoardService boardService;
 
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')") // 해당 role 중 하나가 있는 사용자만 접근 가능
     @GetMapping("/BoardRegister")
     public void BoardRegister(){
 
     }
+
+
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')") // 해당 role 중 하나가 있는 사용자만 접근 가능
     @PostMapping("/BoardRegister")
     public String register(BoardVO boardVO){
 
@@ -34,6 +39,7 @@ public class BoardController {
         return "redirect:/board/BoardList";
     }
 
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')") // 해당 role 중 하나가 있는 사용자만 접근 가능
     @PostMapping("/BoardUpdate")
     public String update(BoardVO boardVO){
         boardService.update(boardVO);
@@ -41,11 +47,14 @@ public class BoardController {
         return "redirect:/board/BoardList";
     }
 
+
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')") // 해당 role 중 하나가 있는 사용자만 접근 가능
     @GetMapping("/BoardDelete")
     public String delete(int id){
         boardService.delete(id);
         return "redirect:/board/BoardList";
     }
+
 
     @GetMapping("/BoardList")
     public void list(Model model){
@@ -65,6 +74,8 @@ public class BoardController {
         return "/board/BoardRead";
     }
 
+
+//    @PreAuthorize("hasAnyRole('USER', 'ADMIN')") // 해당 role 중 하나가 있는 사용자만 접근 가능
     @GetMapping("/BoardUpdate")
     public String updateBoard(int id, Model model) {
         // 해당 게시글 조회

@@ -53,7 +53,11 @@ public class MemberController {
 
 
     @GetMapping("/login")
-    public void test2(){
+    public void loginProcess(String error, String logout, HttpSession session){
+
+        log.info("session1"+session);
+        log.info("login get.........  ");
+        log.info("logout: "+logout);
 
     }
 //    @RequestMapping("/login")
@@ -72,6 +76,7 @@ public class MemberController {
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         // 세션 제거
+        log.info("로그인중인 세션"+session);
         session.invalidate();
         log.info("로그아웃");
         return "redirect:/";  // 로그아웃 후 홈페이지로 리다이렉트

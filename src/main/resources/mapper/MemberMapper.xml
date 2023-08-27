@@ -7,19 +7,19 @@
         insert into
             user (userId, password, password_con, name, role)
         values
-            (#{userId}, #{password}, #{password_con}, #{name}, "USER");
+            (#{username}, #{password}, #{password_con}, #{name}, "USER");
     </insert>
 
 
     <select id="getMemberById">
         select *
         from user
-        where userId = #{userId};
+        where userId = #{username};
     </select>
 
     <select id="loginMember">
         select *
         from user
-        where userId = #{userId} and password = #{password};
+        where userId = #{username} and password = #{password};
     </select>
 </mapper>
