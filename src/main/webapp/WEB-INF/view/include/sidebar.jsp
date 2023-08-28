@@ -18,28 +18,11 @@
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="redirect:/">펄스농</a>
+    <a class="navbar-brand ps-3" href="..">펄스농</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar Search-->
-    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-        <div class="input-group">
-            <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-            <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-        </div>
-    </form>
     <!-- Navbar-->
-    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">Settings</a></li>
-                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Logout</a></li>
-            </ul>
-        </li>
-    </ul>
 </nav>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
@@ -81,7 +64,6 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="../board/BoardList">게시판 목록</a>
                             <a class="nav-link" href="../board/BoardRegister">게시물 쓰기</a>
-                            <a class="nav-link" href="../news/newsdata">뉴스 검색</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -97,9 +79,10 @@
                             </a>
                             <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../data/graph_data">작물별 비교 데이터</a>
-                                    <a class="nav-link" href="../data/area_data">지역별 작물 비율</a>
-                                    <a class="nav-link" href="../data/moun_data">주산지별 데이터</a>
+                                    <a class="nav-link" href="../data/graph_data">가격변동 패턴 비교</a>
+                                    <a class="nav-link" href="../data/area_data">애호박 대표성</a>
+                                    <a class="nav-link" href="../data/moun_data">산지별 생산량</a>
+                                    <a class="nav-link" href="../news/newsdata">뉴스 검색</a>
                                 </nav>
                             </div>
                         </nav>

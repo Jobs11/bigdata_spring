@@ -3,26 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>애호박 데이터</title>
-    <style>
-        .tableauPlaceholder {
-            margin-top: 60px;
-        }
-    </style>
+    <title>Title</title>
 </head>
 <body>
 <%@ include file="../include/sidebar.jsp" %>
-<div class='tableauPlaceholder' id='viz1692942853175' style='position: relative'>
+<div class='tableauPlaceholder' id='viz1692942877255' style='position: relative'>
     <noscript><a href='#'><img alt='대시보드 1 '
-                               src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Q7&#47;Q7CFS895Z&#47;1_rss.png'
+                               src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16928619530630&#47;1&#47;1_rss.png'
                                style='border: none'/></a></noscript>
     <object class='tableauViz' style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
         <param name='embed_code_version' value='3'/>
-        <param name='path' value='shared&#47;Q7CFS895Z'/>
+        <param name='path' value='views&#47;_16928619530630&#47;1?:language=ko-KR&amp;:embed=true&amp;publish=yes'/>
         <param name='toolbar' value='yes'/>
         <param name='static_image'
-               value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Q7&#47;Q7CFS895Z&#47;1.png'/>
+               value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16928619530630&#47;1&#47;1.png'/>
         <param name='animate_transition' value='yes'/>
         <param name='display_static_image' value='yes'/>
         <param name='display_spinner' value='yes'/>
@@ -33,7 +28,7 @@
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1692942853175');
+    var divElement = document.getElementById('viz1692942877255');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
         vizElement.style.minWidth = '420px';

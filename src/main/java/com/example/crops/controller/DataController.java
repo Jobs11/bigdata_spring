@@ -26,4 +26,9 @@ public class DataController {
     public String moundata(){
         return "data/moun_data";
     }
+
+    @GetMapping("/test_data")
+    public String testdata(){
+        return "data/test_data";
+    }
 }

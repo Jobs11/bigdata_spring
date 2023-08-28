@@ -22,6 +22,7 @@
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">뉴스 검색!</h1>
             <p class="lead fw-normal text-white-50 mb-0">Collecting News Search Data</p>
+            <p class="lead fw-normal text-white-50 mb-0">"${search}" 검색 결과</p>
             <form method="get" action="../news/newsdata">
                 <div class="row">
                     <div class="col">
